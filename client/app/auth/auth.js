@@ -1,4 +1,4 @@
-angular.module('points.login'['ui.router'])
+angular.module('points.auth'['ui.router'])
 
 .config(function($stateProvider) {
   $stateProvider
@@ -12,4 +12,8 @@ angular.module('points.login'['ui.router'])
       templateUrl: 'app/login/signup.html',
       controller: 'Auth'
     })
+})
+
+.controller('Auth', function($scope, $state) {
+
 })
