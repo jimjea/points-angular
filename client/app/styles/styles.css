@@ -1,0 +1,9 @@
+.authform {
+  width: 200px;
+  clear: both;
+}
+
+.authform input {
+  width: 100%;
+  clear: both;
+}

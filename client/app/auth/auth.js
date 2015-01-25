@@ -1,19 +1,21 @@
-angular.module('points.auth'['ui.router'])
+angular.module('points.auth', ['ui.router'])
 
 .config(function($stateProvider) {
   $stateProvider
     .state('login', {
       url: '/login',
-      templateUrl: 'app/login/login.html',
+      templateUrl: 'app/auth/login.html',
       controller: 'Auth'
     })
     .state('signup', {
       url: '/signup',
-      templateUrl: 'app/login/signup.html',
+      templateUrl: 'app/auth/signup.html',
       controller: 'Auth'
     })
 })
 
-.controller('Auth', function($scope, $state) {
-
+.controller('Auth', function($scope) {
+  $scope.validate = function() {
+    console.log('send validation to server');
+  };
 })
