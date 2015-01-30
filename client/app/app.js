@@ -1,6 +1,6 @@
 angular.module('points', [
   'points.auth',
-  'points.mainPage'
+  'points.pointsDisplay'
 ])
 
 .config(function($urlRouterProvider) {
