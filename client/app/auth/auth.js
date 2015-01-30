@@ -16,6 +16,6 @@ angular.module('points.auth', ['ui.router'])
 
 .controller('AuthController', function($scope, $state) {
   $scope.validate = function() {
-    $state.go('pointsDiplayMain');
+    $state.go('pointsDisplayMain');
   };
-})
+});
