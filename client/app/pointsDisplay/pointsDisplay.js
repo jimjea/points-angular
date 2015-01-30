@@ -10,5 +10,7 @@ angular.module('points.pointsDisplay', ['ui.router'])
 })
 
 .controller('PointsDisplayController', function($scope, $state) {
-
+  $scope.goToEditor = function() {
+    $state.go('editor');
+  };
 });
