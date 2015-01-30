@@ -10,12 +10,13 @@ angular.module('points.auth', ['ui.router'])
     .state('signup', {
       url: '/signup',
       templateUrl: 'app/auth/signup.html',
-      controller: 'Auth'
+      controller: 'AuthController'
     })
 })
 
-.controller('Auth', function($scope, $state) {
+.controller('AuthController', function($scope, $state) {
   $scope.validate = function() {
-    $state.go('somwhere');
+    console.log('got here')
+    $state.go('mainPage');
   };
 })
