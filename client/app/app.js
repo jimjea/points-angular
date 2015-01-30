@@ -3,5 +3,5 @@ angular.module('points', [
 ])
 
 .config(function($urlRouterProvider) {
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/signup');
 });

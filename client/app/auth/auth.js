@@ -14,8 +14,8 @@ angular.module('points.auth', ['ui.router'])
     })
 })
 
-.controller('Auth', function($scope) {
+.controller('Auth', function($scope, $state) {
   $scope.validate = function() {
-    console.log('send validation to server');
+    $state.go('somwhere');
   };
 })
