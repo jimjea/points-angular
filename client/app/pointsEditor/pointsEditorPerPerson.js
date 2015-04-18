@@ -9,6 +9,6 @@ angular.module('points.editorPerPerson', ['ui.router'])
     })
 })
 
-.controller('EditorPerPerson', function($scope) {
-  
+.controller('EditorPerPerson', function($scope, PointsEditor) {
+  console.log(PointsEditor.currentGirl)
 });

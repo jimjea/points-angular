@@ -11,14 +11,13 @@ angular.module('points.editor', ['ui.router'])
 
 .controller('EditorController', function($scope, $state, PointsEditor, Auth) {
   $scope.testData = PointsEditor.testData;
-  console.log($scope.testData)
   $scope.userName = Auth.userInfo.name;
   $scope.goToAllPoints = function() {
     $state.go('pointsDisplayMain');
   };
   $scope.editPerPerson = function() {
+    var clickedGirl = angular.element(this)[0].data.name;
+    PointsEditor.clickedGirl(clickedGirl);
     $state.go('editorPerPerson');
   };
-  $scope.test1 = '';
 });
-

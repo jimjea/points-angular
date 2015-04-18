@@ -9,14 +9,23 @@ angular.module('points.editorServices', [])
     this.blow = blow || null;
     this.date = date || null;
   };
+
   var testData = {
     'Nataly': new Girl('4/2/2015', 'Nataly'),
     'Sue': new Girl('3/29/2015', 'Sue'),
     'Amelia': new Girl('3/20/2015', 'Amelia')
   };
 
+  var currentGirl = [];
+  var clickedGirl = function(name) {
+    currentGirl.pop();
+    currentGirl.push(name);
+  };
+
   return {
-    testData: testData
+    testData: testData,
+    clickedGirl: clickedGirl,
+    currentGirl: currentGirl
   };
 
 });
