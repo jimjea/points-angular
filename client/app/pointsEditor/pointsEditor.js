@@ -10,9 +10,15 @@ angular.module('points.editor', ['ui.router'])
 })
 
 .controller('EditorController', function($scope, $state, PointsEditor, Auth) {
+  $scope.testData = PointsEditor.testData;
+  $scope.userName = Auth.userInfo.name;
   $scope.goToAllPoints = function() {
     $state.go('pointsDisplayMain');
   };
-  $scope.testData = PointsEditor.testData;
-  $scope.userName = Auth.userInfo.name;
+  $scope.editPerPerson = function() {
+    $state.go('editorPerPerson');
+  };
+  $scope.test = '';
+  console.log($scope.test)
 });
+

@@ -3,7 +3,7 @@
   <div>{{userName}}'s Editor </div><br></br>
 
   <div ng-repeat="data in testData">
-    {{data.date}} {{data.name}}
+    <div ng-model="test" ng-click="editPerPerson()"> hi {{data.date}} {{data.name}}</div>
   </div>
 
   <br></br>

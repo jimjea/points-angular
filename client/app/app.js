@@ -4,7 +4,8 @@ angular.module('points', [
   'points.pointsDisplay',
   'points.pointsDisplay',
   'points.editor',
-  'points.editorServices'
+  'points.editorServices',
+  'points.editorPerPerson'
 ])
 
 .config(function($urlRouterProvider) {
