@@ -14,8 +14,11 @@ angular.module('points.auth', ['ui.router'])
     })
 })
 
-.controller('AuthController', function($scope, $state) {
+.controller('AuthController', function($scope, $state, Auth) {
+  $scope.name = '';
+  $scope.password = '';
   $scope.validate = function() {
+    Auth.userInfoCapture({name: $scope.name, password: $scope.password}); // yes i know it's not secure at the moment
     $state.go('pointsDisplayMain');
   };
 });

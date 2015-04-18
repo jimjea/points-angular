@@ -1,7 +1,10 @@
 angular.module('points', [
   'points.auth',
+  'points.authServices',
   'points.pointsDisplay',
-  'points.editor'
+  'points.pointsDisplay',
+  'points.editor',
+  'points.editorServices'
 ])
 
 .config(function($urlRouterProvider) {

@@ -2,9 +2,9 @@
 
   <h4>Sign up if it's your first time</h4>
 
-  <form ng-submit="validate()" class="authform">
-    First name: <input type="text"> <br>
-    Password: <input type="password">
+  <form ng-submit="validate()" ng-click="test()" class="authform">
+    First name: <input type="text" ng-model="name"> <br>
+    Password: <input type="password" ng-model="password">
     <input type="submit">
   </form>
 

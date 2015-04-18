@@ -1,5 +1,13 @@
 <div>
 
-  Editor
+  <div>{{userName}}'s Editor </div><br></br>
+
+  <div ng-repeat="data in testData">
+    {{data.date}} {{data.name}}
+  </div>
+
+  <br></br>
+
+  <div ng-click="goToAllPoints()">Go to All Points</div>
 
 </div>
