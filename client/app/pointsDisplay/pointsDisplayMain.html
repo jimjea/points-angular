@@ -1,7 +1,12 @@
 <div>
 
   <div>
-    <div ng-repeat="user in users" ng-click="seeUser()"> {{user.name}} {{user.totalScore}} </div> <br></br>
+    <table class="friend">
+      <tr ng-click="seeUser()" ng-repeat="user in users| toArray | orderBy:'-totalScore'">
+        <td>{{user.name}}</td>
+        <td>{{user.totalScore}}</td>
+      </tr>
+    </table>
   </div> <br>
 
 

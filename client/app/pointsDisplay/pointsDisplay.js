@@ -19,10 +19,13 @@ angular.module('points.pointsDisplay', ['ui.router'])
     $state.go('editor');
   };
   $scope.users = PointsDisplay.allUsers;
+  $scope.selectedUser = PointsDisplay.allUsers[PointsDisplay.currentUser];
   $scope.seeUser = function() {
     var clickedUser = angular.element(this)[0].user.name;
     PointsDisplay.clickedUser(clickedUser);
     $state.go('pointsDisplayPerson');
   };
-  $scope.selectedUser = PointsDisplay.allUsers[PointsDisplay.currentUser];
+  $scope.goToMainDisplay = function() {
+    $state.go('pointsDisplayMain');
+  };
 });
