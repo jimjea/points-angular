@@ -3,15 +3,15 @@
   <div>{{userName}}'s Editor </div><br></br>
 
   <div ng-repeat="data in testData">
-    <div ng-click="editPerPerson()"> {{data.day}} {{data.name}} {{data.score}}</div>
+    <div ng-click="editPerPerson()"> {{data.day}} {{data.name}} {{data.score}}</div> <br>
   </div>
 
   <br></br>
 
-  <div ng-click="goToAddGirl()">Add a chick</div> <br> <br>
+  <div class="buttons" ng-click="goToAddGirl()">Add a chick</div> <br> <br>
 
-  <div>Total Points: {{totalScore()}}</div>
+  <div>Total Points: {{totalScore()}}</div> <br> 
 
-  <div ng-click="goToAllPoints()">Go to All Points</div>
+  <div class="buttons" ng-click="goToAllPoints()">Go to All Points</div>
 
 </div>

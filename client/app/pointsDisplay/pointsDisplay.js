@@ -4,12 +4,12 @@ angular.module('points.pointsDisplay', ['ui.router'])
   $stateProvider
     .state('pointsDisplayMain', {
       url: '/pointsDisplayMain',
-      templateUrl: 'app/pointsDisplay/pointsDisplayMain.html',
+      templateUrl: 'client/app/pointsDisplay/pointsDisplayMain.html',
       controller: 'PointsDisplayController'
     })
     .state('pointsDisplayPerson', {
       url: '/pointsDisplayPerson',
-      templateUrl: 'app/pointsDisplay/pointsDisplayPerson.html',
+      templateUrl: 'client/app/pointsDisplay/pointsDisplayPerson.html',
       controller: 'PointsDisplayController'
     })
 })

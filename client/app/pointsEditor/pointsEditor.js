@@ -4,12 +4,12 @@ angular.module('points.editor', ['ui.router'])
   $stateProvider
     .state('editor', {
       url: '/editor',
-      templateUrl: 'app/pointsEditor/pointsEditor.html',
+      templateUrl: 'client/app/pointsEditor/pointsEditor.html',
       controller: 'EditorController'
     })
     .state('addGirl', {
       url: '/addGirl',
-      templateUrl: 'app/pointsEditor/addGirl.html',
+      templateUrl: 'client/app/pointsEditor/addGirl.html',
       controller: 'EditorController'
     })
 })
