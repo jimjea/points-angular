@@ -15,8 +15,8 @@ angular.module('points.editor', ['ui.router'])
 })
 
 .controller('EditorController', function($scope, $state, PointsEditor, PointsDisplay, Auth) {
-  $scope.testData = PointsEditor.testData;
   $scope.userName = Auth.userInfo.name;
+  $scope.testData = PointsDisplay.allUsers[$scope.userName].girls;
   $scope.goToAllPoints = function() {
     $state.go('pointsDisplayMain');
   };

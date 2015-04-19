@@ -28,4 +28,8 @@ angular.module('points.pointsDisplay', ['ui.router'])
   $scope.goToMainDisplay = function() {
     $state.go('pointsDisplayMain');
   };
+
+  $scope.logOut = function() {
+    $state.go('signup');
+  };
 });

@@ -7,3 +7,8 @@
   width: 100%;
   clear: both;
 }
+
+.buttons {
+  display: inline;
+  border: 1px solid black;
+}
