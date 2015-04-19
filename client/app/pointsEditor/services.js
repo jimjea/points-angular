@@ -29,7 +29,7 @@ angular.module('points.editorServices', [])
       if (data[key] > 0) {
         testData[currentGirl][key] = data[key];
       } else {
-        testData[currentGirl][key] = null;
+        testData[currentGirl][key] = 0;
       }
     }
   };
