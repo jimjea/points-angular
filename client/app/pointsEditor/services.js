@@ -11,6 +11,8 @@ angular.module('points.editorServices', [])
     this.score = score || 0;
   };
 
+
+  // this data will come from somewhere else eventually
   var testData = {
     'Nataly': new Girl('4/2/2015', 'Nataly'),
     'Sue': new Girl('3/29/2015', 'Sue'),
@@ -21,6 +23,8 @@ angular.module('points.editorServices', [])
     'Joelle': new Girl('3/20/2015', 'Joelle'),
     'Eva': new Girl('3/20/2015', 'Eva')
   };
+
+
 
   var currentGirl = ['Amelia'];
   var clickedGirl = function(name) {
