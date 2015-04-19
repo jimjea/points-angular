@@ -12,10 +12,11 @@ angular.module('points.editorPerPerson', ['ui.router'])
 .controller('EditorPerPerson', function($scope, $state, PointsEditor) {
   $scope.girlData = PointsEditor.testData[PointsEditor.currentGirl];
   $scope.score = {
-    bang: 0,
-    kiss: 0,
-    blow: 0,
-    date: 0
+    bang: null,
+    blow: null,
+    kiss: null,
+    date: null,
+    score: 0
   };
   $scope.updateGirl = function(data) {
     PointsEditor.updateGirl(data);
@@ -26,5 +27,8 @@ angular.module('points.editorPerPerson', ['ui.router'])
   }
   $scope.backToGirls = function() {
     $state.go('editor');
+  };
+  $scope.updateScore = function() {
+    $scope.score.score = $scope.score.bang || $scope.score.blow || $scope.score.kiss || $scope.score.date || $scope.score.score;
   };
 });

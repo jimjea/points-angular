@@ -1,6 +1,6 @@
 <div>
 
-  <div>
+  <div ng-click="updateScore()">
     <div>date: {{girlData.day}}</div>
     <div>name: {{girlData.name}}</div>
     <div>bang <input type="checkbox" ng-checked="girlData.bang" ng-model="score.bang" ng-true-value="8" ng-false-value="0"></div>
@@ -12,7 +12,7 @@
 
   <div ng-click="sendUpdatedGirlData()">Save and Update</div> <br>
 
-  <div>Score: 10</div>
+  <div>Score: {{score.score}}</div>
 
   <div ng-click="backToGirls()">Back to Girls</div>
 
