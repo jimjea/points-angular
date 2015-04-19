@@ -38,9 +38,18 @@ angular.module('points.editor', ['ui.router'])
     $state.go('addGirl');
   };
 
+  // for today's date
+  var date = new Date();
+  var year = date.getUTCFullYear();
+  var month = date.getUTCMonth();
+  var day = date.getUTCDate();
+  month = ("0" + (month + 1)).slice(-2)
+  year = year.toString().substr(2,2)
+  var formattedDate = month + '/' + day + '/' + year;
+
   $scope.newGirl = {
     name: '',
-    day: ''  
+    day: formattedDate  
   };
   $scope.addGirl = function(data) {
     $scope.nameTaken = PointsEditor.addGirl(data) || '';
