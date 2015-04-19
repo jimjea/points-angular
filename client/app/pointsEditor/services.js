@@ -14,7 +14,12 @@ angular.module('points.editorServices', [])
   var testData = {
     'Nataly': new Girl('4/2/2015', 'Nataly'),
     'Sue': new Girl('3/29/2015', 'Sue'),
-    'Amelia': new Girl('3/20/2015', 'Amelia')
+    'Amelia': new Girl('3/20/2015', 'Amelia'),
+    'Angela': new Girl('3/20/2015', 'Angela'),
+    'Ugly Canadian': new Girl('3/20/2015', 'Ugly Canadian'),
+    'Lyly': new Girl('3/20/2015', 'Lyly'),
+    'Joelle': new Girl('3/20/2015', 'Joelle'),
+    'Eva': new Girl('3/20/2015', 'Eva')
   };
 
   var currentGirl = ['Amelia'];

@@ -54,4 +54,8 @@ angular.module('points.editor', ['ui.router'])
   $scope.addGirl = function(data) {
     $scope.nameTaken = PointsEditor.addGirl(data) || '';
   };
+
+  $scope.goToEditor = function() {
+    $state.go('editor');
+  };
 });
