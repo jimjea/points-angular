@@ -1,13 +1,14 @@
 angular.module('points.editorServices', [])
 
 .factory('PointsEditor', function() {
-  var Girl = function(day, name, bang, kiss, blow, date) {
+  var Girl = function(day, name, bang, kiss, blow, date, score) {
     this.day = day;
     this.name = name;
-    this.bang = bang || false;
-    this.kiss = kiss || false;
-    this.blow = blow || false;
-    this.date = date || false;
+    this.bang = bang || null;
+    this.kiss = kiss || null;
+    this.blow = blow || null;
+    this.date = date || null;
+    this.score = score || 0;
   };
 
   var testData = {
@@ -23,11 +24,13 @@ angular.module('points.editorServices', [])
   };
 
   var updateGirl = function(data) {
+    console.log(data['score'])
     for (var key in data) {
-      if (data[key] > 0) {
-        testData[currentGirl][key] = true;
+      if (data[key] > 0 || data[key] === 0) {
+        testData[currentGirl][key] = data[key];
+    console.log(testData[currentGirl]['score'])
       } else {
-        testData[currentGirl][key] = false;
+        testData[currentGirl][key] = null;
       }
     }
   };
