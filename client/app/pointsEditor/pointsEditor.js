@@ -7,6 +7,11 @@ angular.module('points.editor', ['ui.router'])
       templateUrl: 'app/pointsEditor/pointsEditor.html',
       controller: 'EditorController'
     })
+    .state('addGirl', {
+      url: '/addGirl',
+      templateUrl: 'app/pointsEditor/addGirl.html',
+      controller: 'EditorController'
+    })
 })
 
 .controller('EditorController', function($scope, $state, PointsEditor, PointsDisplay, Auth) {
@@ -28,5 +33,16 @@ angular.module('points.editor', ['ui.router'])
     }
     PointsDisplay.updateTotalScore({user: Auth.userInfo.name, totalScore: sum});
     return sum;
+  };
+  $scope.goToAddGirl = function() {
+    $state.go('addGirl');
+  };
+
+  $scope.newGirl = {
+    name: '',
+    day: ''  
+  };
+  $scope.addGirl = function(data) {
+    $scope.nameTaken = PointsEditor.addGirl(data) || '';
   };
 });

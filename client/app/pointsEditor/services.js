@@ -1,6 +1,6 @@
 angular.module('points.editorServices', [])
 
-.factory('PointsEditor', function() {
+.factory('PointsEditor', function($state) {
   var Girl = function(day, name, bang, kiss, blow, date, score) {
     this.day = day;
     this.name = name;
@@ -33,11 +33,22 @@ angular.module('points.editorServices', [])
     }
   };
 
+  var addGirl = function(data) {
+    var capitalizeName = data.name[0].toUpperCase() + data.name.slice(1).toLowerCase();
+    if (testData[capitalizeName]) {
+      return 'You already fucked a girl named ' + capitalizeName + '. Make it unique somehow.';
+    } else {
+      testData[capitalizeName] = new Girl(data.day, capitalizeName);
+      $state.go('editor');
+    }
+  };
+
   return {
     testData: testData,
     clickedGirl: clickedGirl,
     currentGirl: currentGirl,
-    updateGirl: updateGirl
+    updateGirl: updateGirl,
+    addGirl: addGirl
   };
 
 });
