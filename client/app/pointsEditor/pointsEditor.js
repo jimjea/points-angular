@@ -20,4 +20,12 @@ angular.module('points.editor', ['ui.router'])
     PointsEditor.clickedGirl(clickedGirl);
     $state.go('editorPerPerson');
   };
+  $scope.totalScore = function() {
+    var sum = 0;
+    var obj = PointsEditor.testData;
+    for (var key in obj) {
+      sum += obj[key].score;
+    }
+    return sum;
+  };
 });

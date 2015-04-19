@@ -3,10 +3,12 @@
   <div>{{userName}}'s Editor </div><br></br>
 
   <div ng-repeat="data in testData">
-    <div ng-click="editPerPerson()"> {{data.day}} {{data.name}}</div>
+    <div ng-click="editPerPerson()"> {{data.day}} {{data.name}} {{data.score}}</div>
   </div>
 
   <br></br>
+
+  <div>Total Points: {{totalScore()}}</div>
 
   <div ng-click="goToAllPoints()">Go to All Points</div>
 
