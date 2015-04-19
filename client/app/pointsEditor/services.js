@@ -16,16 +16,26 @@ angular.module('points.editorServices', [])
     'Amelia': new Girl('3/20/2015', 'Amelia')
   };
 
-  var currentGirl = [];
+  var currentGirl = ['Amelia'];
   var clickedGirl = function(name) {
     currentGirl.pop();
     currentGirl.push(name);
   };
 
+  var updateGirl = function(data) {
+    console.log(data)
+    for (var key in data) {
+      if (data[key] > 0) {
+        testData[currentGirl][key] = true;
+      }
+    }
+  };
+
   return {
     testData: testData,
     clickedGirl: clickedGirl,
-    currentGirl: currentGirl
+    currentGirl: currentGirl,
+    updateGirl: updateGirl
   };
 
 });

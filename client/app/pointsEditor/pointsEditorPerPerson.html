@@ -1,5 +1,19 @@
 <div>
 
-  hi
+  <div>
+    <div>date: {{girlData.day}}</div>
+    <div>name: {{girlData.name}}</div>
+    <div>bang <input type="checkbox" ng-model="score.bang" ng-true-value="10" ng-false-value="0"></div>
+    <div>kiss <input type="checkbox" ng-model="score.kiss" ng-true-value="10" ng-false-value="0"></div>
+    <div>blow <input type="checkbox" ng-model="score.blow" ng-true-value="10" ng-false-value="0"></div>
+    <div>date <input type="checkbox" ng-model="score.date" ng-true-value="10" ng-false-value="0"></div>
+
+  </div> <br>
+
+  <div ng-click="sendUpdatedGirlData()">Save and Update</div> <br>
+
+  <div>Score: 10</div>
+
+  <div ng-click="backToGirls()">Back to Girls</div>
 
 </div>

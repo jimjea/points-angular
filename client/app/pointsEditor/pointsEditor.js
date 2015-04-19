@@ -20,4 +20,5 @@ angular.module('points.editor', ['ui.router'])
     PointsEditor.clickedGirl(clickedGirl);
     $state.go('editorPerPerson');
   };
+  console.log(PointsEditor.testData['Amelia'])
 });
