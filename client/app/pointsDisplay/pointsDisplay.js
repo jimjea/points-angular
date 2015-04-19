@@ -9,8 +9,9 @@ angular.module('points.pointsDisplay', ['ui.router'])
     })
 })
 
-.controller('PointsDisplayController', function($scope, $state) {
+.controller('PointsDisplayController', function($scope, $state, PointsDisplay) {
   $scope.goToEditor = function() {
     $state.go('editor');
   };
+  $scope.users = PointsDisplay.allUsers;
 });

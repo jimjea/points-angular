@@ -2,7 +2,7 @@ angular.module('points', [
   'points.auth',
   'points.authServices',
   'points.pointsDisplay',
-  'points.pointsDisplay',
+  'points.pointsDisplayServices',
   'points.editor',
   'points.editorServices',
   'points.editorPerPerson'

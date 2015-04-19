@@ -9,7 +9,7 @@ angular.module('points.editor', ['ui.router'])
     })
 })
 
-.controller('EditorController', function($scope, $state, PointsEditor, Auth) {
+.controller('EditorController', function($scope, $state, PointsEditor, PointsDisplay, Auth) {
   $scope.testData = PointsEditor.testData;
   $scope.userName = Auth.userInfo.name;
   $scope.goToAllPoints = function() {
@@ -26,6 +26,7 @@ angular.module('points.editor', ['ui.router'])
     for (var key in obj) {
       sum += obj[key].score;
     }
+    PointsDisplay.updateTotalScore({user: Auth.userInfo.name, totalScore: sum});
     return sum;
   };
 });
