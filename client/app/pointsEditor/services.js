@@ -24,7 +24,6 @@ angular.module('points.editorServices', [])
   };
 
   var updateGirl = function(data) {
-    console.log(data['score'])
     for (var key in data) {
       if (data[key] > 0) {
         testData[currentGirl][key] = data[key];

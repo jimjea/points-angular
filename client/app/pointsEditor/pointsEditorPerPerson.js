@@ -18,7 +18,6 @@ angular.module('points.editorPerPerson', ['ui.router'])
     date: $scope.girlData.date,
     score: $scope.girlData.score
   };
-  console.log($scope.score)
   $scope.updateGirl = function(data) {
     PointsEditor.updateGirl(data);
   };
