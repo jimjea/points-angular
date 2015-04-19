@@ -4,10 +4,10 @@ angular.module('points.editorServices', [])
   var Girl = function(day, name, bang, kiss, blow, date) {
     this.day = day;
     this.name = name;
-    this.bang = bang || null;
-    this.kiss = kiss || null;
-    this.blow = blow || null;
-    this.date = date || null;
+    this.bang = bang || false;
+    this.kiss = kiss || false;
+    this.blow = blow || false;
+    this.date = date || false;
   };
 
   var testData = {
@@ -23,10 +23,11 @@ angular.module('points.editorServices', [])
   };
 
   var updateGirl = function(data) {
-    console.log(data)
     for (var key in data) {
       if (data[key] > 0) {
         testData[currentGirl][key] = true;
+      } else {
+        testData[currentGirl][key] = false;
       }
     }
   };
