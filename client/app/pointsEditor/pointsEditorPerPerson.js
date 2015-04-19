@@ -4,7 +4,7 @@ angular.module('points.editorPerPerson', ['ui.router'])
   $stateProvider
     .state('editorPerPerson', {
       url: '/editorPerPerson',
-      templateUrl: 'client/app/pointsEditor/pointsEditorPerPerson.html',
+      templateUrl:'client/app/pointsEditor/pointsEditorPerPerson.html',
       controller: 'EditorPerPerson'
     })
 })
