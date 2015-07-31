@@ -2,14 +2,14 @@
 
   <div>
     <ul class="list-group" ng-repeat="user in users | toArray | orderBy:'-totalScore'">
-      <li style="height:120px; font-size: 60px; margin-top:auto; margin-bottom: auto" class="list-group-item">{{user.name}}<span style="font-size: 60px; float:right">{{user.totalScore}}</span></li>
+      <li style="font-size: 70px; margin-top:auto; margin-bottom: auto" class="list-group-item">{{user.name}}<span style="font-size: 70px; float:right">{{user.totalScore}}</span></li>
     </ul>
 
     <div class="col-xs-8 col-xs-offset-2 text-center">
       <br>
-      <div ng-click="goToEditor()" class="btn btn-primary btn-lg" style="font-size: 55px"> Edit my Points </div>
-      <br><br><br>
-      <div ng-click="logOut()" class="btn btn-primary btn-lg" style="font-size: 45px;">Log Out</div>
+      <div ng-click="goToEditor()" class="btn btn-primary btn-lg" style="font-size: 65px"> Edit my Points </div>
+      <br><br><br><br><br>
+      <div ng-click="logOut()" class="btn btn-primary btn-lg" style="font-size: 50px;">Log Out</div>
     </div>
   </div>
 </div>
