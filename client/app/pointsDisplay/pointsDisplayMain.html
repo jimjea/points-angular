@@ -2,7 +2,7 @@
 
   <div>
     <ul class="list-group" ng-repeat="user in users | toArray | orderBy:'-totalScore'">
-      <li class="list-group-item">{{user.name}}<span class="badge">{{user.totalScore}}</span></li>
+      <li style="height:100px; font-size: 40px; margin-top:auto; margin-bottom: auto"class="list-group-item">{{user.name}}<span class="badge" style="font-size: 40px">{{user.totalScore}}</span></li>
     </ul>
 
     <div class="col-xs-6 col-xs-offset-3 text-center">
