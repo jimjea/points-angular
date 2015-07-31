@@ -1,17 +1,20 @@
-<div>
+<div class="container">
 
-  <div>{{userName}}'s Editor </div><br></br>
+  <div style="text-align:center;font-size:35px">{{userName}}'s Editor </div><br>
 
-  <div ng-repeat="data in testData">
-    <div ng-click="editPerPerson()"> {{data.day}} {{data.name}} {{data.score}}</div> <br>
+  <div style="text-align:center; font-size: 10px"> Tap a girl to edit her points </div>
+
+  <ul class="list-group" ng-repeat="data in testData">
+    <li class="list-group-item" ng-click="editPerPerson()"> {{data.name}} {{data.day}} <span style="float:right; font-size:25px">{{data.score}}</span></li> <br>
+  </ul>
+
+  <div class="text-center">
+
+    <div class="btn btn-primary btn-lg" style="font-size: 30px" ng-click="goToAddGirl()">Add</div> <br> <br>
+
+    <div style="font-size: 25px">Total Points: {{totalScore()}}</div> <br> 
+
+    <div class="btn btn-primary btn-lg" style="font-size: 20px" ng-click="goToAllPoints()">Back to All Points</div>
+
   </div>
-
-  <br></br>
-
-  <div class="buttons" ng-click="goToAddGirl()">Add a chick</div> <br> <br>
-
-  <div>Total Points: {{totalScore()}}</div> <br> 
-
-  <div class="buttons" ng-click="goToAllPoints()">Go to All Points</div>
-
 </div>

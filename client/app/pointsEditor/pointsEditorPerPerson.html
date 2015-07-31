@@ -1,19 +1,25 @@
-<div>
+<div class="container">
 
-  <div ng-click="updateScore()">
-    <div>date: {{girlData.day}}</div>
-    <div>name: {{girlData.name}}</div> <br>
-    <div>bang &nbsp&nbsp<input class="checks" type="checkbox" ng-checked="girlData.bang" ng-model="score.bang" ng-true-value="8" ng-false-value="0"></div> <br>
-    <div>blow &nbsp&nbsp<input class="checks" type="checkbox" ng-checked="girlData.blow" ng-model="score.blow" ng-true-value="6" ng-false-value="0"></div> <br>
-    <div>kiss &nbsp&nbsp<input class="checks" type="checkbox" ng-checked="girlData.kiss" ng-model="score.kiss" ng-true-value="2" ng-false-value="0"></div> <br>
-    <div>date &nbsp&nbsp<input class="checks" type="checkbox" ng-checked="girlData.date" ng-model="score.date" ng-true-value="1" ng-false-value="0"></div> <br>
+  <div class="text-center">
+    <div>Date: {{girlData.day}}</div>
+    <div>Name: {{girlData.name}}</div> <br>
+    <div class="col-xs-4 col-xs-offset-4">
+      <ul class="list-group">
+        <li class="list-group-item">bang &nbsp&nbsp<input class="checks" type="checkbox" ng-checked="girlData.bang" ng-model="score.bang" ng-true-value="8" ng-false-value="0"></li> <br>
+        <li class="list-group-item">blow &nbsp&nbsp<input class="checks" type="checkbox" ng-checked="girlData.blow" ng-model="score.blow" ng-true-value="6" ng-false-value="0"></li> <br>
+        <li class="list-group-item">kiss &nbsp&nbsp<input class="checks" type="checkbox" ng-checked="girlData.kiss" ng-model="score.kiss" ng-true-value="2" ng-false-value="0"></li> <br>
+        <li class="list-group-item">date &nbsp&nbsp<input class="checks" type="checkbox" ng-checked="girlData.date" ng-model="score.date" ng-true-value="1" ng-false-value="0"></li> <br>
+      </ul>
+    </div>
 
   </div> <br>
 
-  <div class="buttons" ng-click="sendUpdatedGirlData()">Save and Update</div> <br> <br>
+  <div class="text-center col-xs-8 col-xs-offset-2">
+    <div class="btn btn-primary btn-lg" style="font-size: 20px" ng-click="sendUpdatedGirlData()">Save and Update</div> <br> <br>
 
-  <div>Score: {{score.score}}</div> <br>
+    <div>Score: {{score.score}}</div> <br>
 
-  <div class="buttons" ng-click="backToGirls()">Back to Girls</div>
+    <div class="btn btn-primary btn-lg" ng-click="backToGirls()">Back to Girls</div>
+  </div>
 
 </div>
