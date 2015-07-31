@@ -1,17 +1,13 @@
 <div>
 
-  <div>
-    <table class="friend">
-      <tr ng-click="seeUser()" ng-repeat="user in users| toArray | orderBy:'-totalScore'">
-        <td>{{user.name}}</td>
-        <td>{{user.totalScore}}</td>
-      </tr>
-    </table>
-  </div> <br>
+  <div class="col-xs-6">
+    <ul class="list-group" ng-repeat="user in users | toArray | orderBy:'-totalScore'">
+      <li class="list-group-item">{{user.name}}<span class="badge">{{user.totalScore}}</span></li>
+    </ul>
 
 
-  <div ng-click="goToEditor()" class="buttons"> Go to Editor </div> <br> <br> <br>
+    <div ng-click="goToEditor()" class="btn btn-primary btn-lg"> Go to Editor </div>
+    <div ng-click="logOut()" class="btn btn-primary btn-lg">Log Out</div>
 
-  <div ng-click="logOut()" class="buttons">Log Out</div>
-
+  </div>
 </div>
