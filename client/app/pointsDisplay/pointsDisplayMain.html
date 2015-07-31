@@ -1,6 +1,6 @@
 <div>
 
-  <div class="col-xs-6">
+  <div>
     <ul class="list-group" ng-repeat="user in users | toArray | orderBy:'-totalScore'">
       <li class="list-group-item">{{user.name}}<span class="badge">{{user.totalScore}}</span></li>
     </ul>
